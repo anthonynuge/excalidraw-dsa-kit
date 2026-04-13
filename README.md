@@ -6,11 +6,11 @@ A collection of [Obsidian Excalidraw](https://github.com/zsviczian/obsidian-exca
 
 | Script | Description |
 |--------|-------------|
-| [Datastructure](scripts/Datastructure/) | Parse a text element and render it as an Array, Tree, Linked List, or Matrix |
-| [Generate](scripts/Generate/) | Generate a blank Array/Grid or HashMap table |
-| [Pointer](scripts/Pointer/) | Drop labeled pointer arrows (i/j, L/R, slow/fast, cur/prev) |
-| [Toggle State](scripts/Toggle%20State/) | Cycle selected elements through highlight colors |
-| [Reset State](scripts/Reset%20State/) | Clear background color on selected elements |
+| [parse-datastructure](scripts/parse-datastructure/) | Parse a selected text element and render it as an Array, Tree, Linked List, or Matrix |
+| [blank-datastructure](scripts/blank-datastructure/) | Insert a blank Array/Grid or HashMap scaffold — no input required |
+| [add-pointers](scripts/add-pointers/) | Drop labeled pointer arrows (i/j, L/R, slow/fast, cur/prev) |
+| [toggle-state](scripts/toggle-state/) | Cycle selected elements through highlight colors |
+| [reset-state](scripts/reset-state/) | Clear background color on selected elements |
 
 ## Requirements
 
@@ -40,24 +40,24 @@ Copy the five script folders from this repo's `scripts/` directory into the fold
 
 ```
 Excalidraw/Scripts/
-├── Datastructure/
-│   ├── Datastructure.md
-│   └── Datastructure.svg
-├── Generate/
-│   ├── Generate.md
-│   └── Generate.svg
-├── Pointer/
-│   ├── Pointer.md
-│   └── Pointer.svg
-├── Reset State/
-│   ├── Reset State.md
-│   └── Reset State.svg
-└── Toggle State/
-    ├── Toggle State.md
-    └── Toggle State.svg
+├── parse-datastructure/
+│   ├── parse-datastructure.md
+│   └── parse-datastructure.svg
+├── blank-datastructure/
+│   ├── blank-datastructure.md
+│   └── blank-datastructure.svg
+├── add-pointers/
+│   ├── add-pointers.md
+│   └── add-pointers.svg
+├── toggle-state/
+│   ├── toggle-state.md
+│   └── toggle-state.svg
+└── reset-state/
+    ├── reset-state.md
+    └── reset-state.svg
 ```
 
-> The `.md` file contains the script code; the `.svg` file provides the icon shown in the Tools Panel. Both are required for the script to appear correctly.
+> The `.md` file contains the script code; the `.svg` file provides the icon shown in the Tools Panel. The SVG **must share the same base filename** as the `.md` — Excalidraw's Script Engine pairs them by name.
 
 ### Step 4 — Reload and open the Tools Panel
 
@@ -74,7 +74,7 @@ Excalidraw/Scripts/
 
 ## Usage overview
 
-### Datastructure
+### parse-datastructure
 
 Select a text element whose content is a value list or 2-D array, then run the script. A suggester will ask which structure to draw:
 
@@ -83,22 +83,22 @@ Select a text element whose content is a value list or 2-D array, then run the s
 - **Tree** — `1, 2, 3, null, 4` → BFS/LeetCode-format binary tree
 - **Matrix** — `[[1,2],[3,4]]` → grid
 
-### Generate
+### blank-datastructure
 
 Run the script with nothing selected. Pick **Array / Grid** or **Hash Map**, enter dimensions, and an empty structure is placed on the canvas ready to fill in.
 
-### Pointer
+### add-pointers
 
 Run the script with nothing selected. Pick a pointer set and labeled arrows are placed on the canvas. Drag them onto the array/list cells you want to annotate.
 
-### Toggle State
+### toggle-state
 
 Select one or more elements and run. Each call cycles the background through:
 `transparent → green → yellow → red → transparent`
 
 Use this to mark visited / active / invalid cells while tracing an algorithm.
 
-### Reset State
+### reset-state
 
 Select elements and run. Resets all backgrounds to transparent in one step.
 
