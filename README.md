@@ -10,9 +10,7 @@ This repo is that collection of scripts. If you practice DSA visually and find y
 
 ## Demo
 
-<!-- Add demo gif/video here -->
-
-[Demo coming soon]()
+![parse-datastructure demo](assets/demo-parse-datastructure.gif)
 
 ## Scripts
 
@@ -97,17 +95,23 @@ Select a text element whose content is a value list or 2-D array, then run the s
 
 > **How I use it:** When working through a LeetCode problem I copy the example input directly from the problem page, paste it as a text element on the canvas, select it, and run the script. The data structure appears instantly — no manual drawing. This is especially useful for trees and linked lists where drawing by hand eats time before you've even started thinking about the algorithm.
 
+![parse-datastructure demo](assets/demo-parse-datastructure.gif)
+
 ### blank-datastructure
 
 Run the script with nothing selected. Pick **Array / Grid** or **Hash Map**, enter dimensions, and an empty structure is placed on the canvas ready to fill in.
 
 > **How I use it:** When a problem involves an array or grid that I want to fill in myself, I use this to drop a clean indexed scaffold on the canvas in seconds. The index labels are already there so I can focus on tracing values, not drawing boxes.
 
+![blank-datastructure demo](assets/demo-blank-datastructure.gif)
+
 ### add-pointers
 
 Run the script with nothing selected. Pick a pointer set and labeled arrows are placed on the canvas. Drag them onto the array/list cells you want to annotate.
 
 > **How I use it:** After generating a structure I drop a pointer set and physically drag the arrows across cells to simulate each iteration of the algorithm. Stepping through two-pointer or sliding-window problems this way makes the movement concrete and easy to reason about.
+
+![add-pointers demo](assets/demo-add-pointers.gif)
 
 ### toggle-state
 
@@ -118,11 +122,15 @@ Use this to mark visited / active / invalid cells while tracing an algorithm.
 
 > **How I use it:** When tracing tree and backtracking problems I use colors to track node state — green for visited, yellow for the current node, red for pruned or invalid branches. Clicking through a DFS path visually shows exactly which nodes are on the call stack and which have been eliminated.
 
+![toggle-state demo](assets/demo-toggle-state.gif)
+
 ### reset-state
 
 Select elements and run. Resets all backgrounds to transparent in one step.
 
 > **How I use it:** Once I finish tracing one path or example I select all (Ctrl+A), run reset-state, and the canvas is clean for the next trace — no need to delete and redraw anything.
+
+![toggle-state demo](assets/demo-toggle-state.gif)
 
 ## Contributing
 
